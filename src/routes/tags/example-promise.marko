@@ -1,0 +1,18 @@
+export interface Input {
+  message: string;
+  value: Promise<void>;
+}
+
+<try>
+  <if=(true)>
+    <@placeholder>
+      <p>wait</p>
+    </@placeholder>
+  </if>
+  <@catch>
+    <p>oh no</p>
+  </@catch>
+  <await|_|=input.value>
+    <p>yes: ${input.message}</p>
+  </await>
+</try>
