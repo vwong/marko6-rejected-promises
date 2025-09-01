@@ -1,9 +1,11 @@
+import type { Loader } from "./+handler";
+
 <h1>Rejected promises</h1>
 
 <!-- removing this makes it work! -->
 <some-script/>
 
-<let/loader=$global.loader/>
+<let/loader=$global.loader as Loader/>
 
 <example-promise=loader.promise1 message="one"/>
 <example-promise=loader.promise2 message="two"/>

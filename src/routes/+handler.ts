@@ -1,10 +1,10 @@
-export function preventUnhandledRejections(...promises: Promise<unknown>[]) {
-  for (const promise of promises) promise.catch(() => {});
-}
-
 export interface Loader {
   promise1: Promise<void>;
   promise2: Promise<void>;
+}
+
+function preventUnhandledRejections(...promises: Promise<unknown>[]) {
+  for (const promise of promises) promise.catch(() => {});
 }
 
 const resolveAfter = (duration: number): Promise<void> =>
