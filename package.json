@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "@marko/run": "^0.8.0",
-    "marko": "^6.0.64"
+    "marko": "^6.0.70"
   }
 }
